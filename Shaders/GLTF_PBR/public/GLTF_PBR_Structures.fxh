@@ -7,7 +7,7 @@
         // Note that defining empty macros causes GL shader compilation error on Mac, because
         // it does not allow standalone semicolons outside of main.
         // On the other hand, adding semicolon at the end of the macro definition causes gcc error.
-#       define CHECK_STRUCT_ALIGNMENT(s) static_assert( sizeof(s) % 16 == 0, "sizeof(" #s ") is not multiple of 16" )
+#       define CHECK_STRUCT_ALIGNMENT(s) static_assert( sizeof(s) % 16 == 0, "sizeof(" DILIGENT_STRINGIFY(s) ") is not multiple of 16" )
 #   endif
 
 #endif
